@@ -1,0 +1,30 @@
+# xnew theme configuration
+#
+# Copied from the theme's _config.sample.yml, plus `favicon`, which
+# layout/_head.pug references but the sample never defined.
+#
+# Path style differs per key, because the templates differ:
+#   - `logo`    is used as-is            (layout/_header.pug: src= theme.logo)
+#   - `favicon` is prefixed with config.root (layout/_head.pug: config.root + theme.favicon)
+# So `favicon` must NOT start with a slash, or the output gets a double slash.
+
+logo: /images/avatar.gif
+favicon: favicon.ico
+han_type: zh-Hans
+
+menu:
+  首页: /
+  归档: /archives
+  关于: /about
+
+# Disqus is unreachable from mainland China; leave blank to hide comments.
+disqus:
+  short_name:
+
+icon:
+  rss: /atom.xml
+  github: YOUR_GITHUB_ID
+  # facebook: YOUR_FACEBOOK_ID
+  # twitter: YOUR_TWITTER_ID
+  # weibo: YOUR_WEIBO_ID
+  # zhihu: YOUR_ZHIHU_ID
